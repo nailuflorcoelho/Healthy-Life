@@ -1,0 +1,163 @@
+#corpoCard{
+    font-size: 15px;
+}
+#corpoArtigosRecentes{
+    font-size: 15px;
+    position: relative;
+    float: left;
+}
+#divArtigosRecentes{
+    position: relative;
+    float: right;
+    width: 350px;
+    height: 800px;
+    top: 30px;
+}
+#autorArtigo{
+    font-size: 12px;
+        top: 20px;
+    position: relative;
+}
+#imgArtigo{
+    width: 270px;
+    align-items: left;
+}
+#tituloArtigo{
+    font-size: 17px;
+}
+#tituloCategorias{
+    font-size: 18px;
+    background-color: #9fff96;
+    border-radius: 15px;
+    color: white;
+}
+#articleCategorias{
+    position: relative;
+    float: left;
+    width: 680px;
+    height: 600px;
+    font-size: 15px;
+}
+
+#divprincipal{
+    position: relative;
+    top 14px;
+    width: auto;
+    left: auto;
+    height: 350px;
+}
+
+#carrossel{
+    border: right;
+    position: relative;
+    top: 13px;
+    width:680px; height:300px; float:left;
+    border-radius: 10px;
+    
+}
+
+.carousel-inner img {
+    width: 680px;
+    height: 300px;
+  }
+
+#divloginPrincipal{
+    border: right;
+    background-color: #9fff96;
+    border-radius: 15px;
+    position: relative;
+    top: 13px;
+    width:330px;
+    height:60px;
+    float:right; 
+}
+#divlogin{
+    border: right;
+    background-color: #9fff96;
+    border-radius: 15px;
+    position: relative;
+    top: 13px;
+    width:300px;
+    height:300px;
+    float:center; 
+    justify-content: center;
+}
+#contlogin{
+        position: relative;
+        top: 50px;
+        left: 350px;
+        width: auto;
+         justify-content: center;
+         align-items: center
+}
+#contCadastro{
+        position: relative;
+        top: 50px;
+        left: 350px;
+        width: auto;
+         justify-content: center;
+         align-items: center
+}
+#divCadastro{
+    border: right;
+    background-color: #9fff96;
+    border-radius: 15px;
+    position: relative;
+    top: 13px;
+    width:400px;
+    height:540px;
+    float:center; 
+}
+
+#divtextlogin{
+ 
+}
+
+#navitem{
+        font-size: 15px;
+    }
+
+        #divBusca{
+      background-color:white;
+      border-radius:15px;
+    }
+
+    #txtBusca{
+      float:left;
+      background-color:transparent;
+      padding-left:5px;
+      font-style:italic;
+      font-size:18px;
+      border:none;
+      height:32px;
+      width:160px;
+    }
+    #btnBusca{
+      width=50px;
+      height=60px;
+            }
+            a{
+                font-size: 16px;
+            }
+            body{
+                margin-bottom: 100px;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            #caminho{
+                position: relative;
+                top: 20px;
+                height: 70px;
+            }
+            #btnCaminho{
+                border: 3px solid #b0e0e6;
+                font-size: 13px;
+            }
+
+        #divBusca{
+      background-color:white;
+      border-radius:15px;
+    }
+
+

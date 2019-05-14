@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Principal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="arquivo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyA1NCVLZhoOGkwfNTrpZl0Y4-n7QnZsEfM",
+            authDomain: "healthylife-77c13.firebaseapp.com",
+            databaseURL: "https://healthylife-77c13.firebaseio.com",
+            projectId: "healthylife",
+            storageBucket: "healthylife.appspot.com",
+            messagingSenderId: "508711404403"
+          };
+          firebase.initializeApp(config);
+        </script>
+    
+ </ head>
+<body>
+        <header>
+        <nav class="navbar navbar-expand-sm justify-content-center " style="background-color:#b0e0e6; border-radius: 15px" id="nav" >
+            <div style="position:relative; top: auto;left: -16px;width: auto ">
+  <!-- Brand/logo -->
+                <a class="navbar-brand" href="principal.html"><img src="life2.png" alt="logo" style="width:190px;"></a>
+            </div>
+  <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="exercicios.html">EXERCÍCIOS FÍSICOS</a></li>
+                <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="alimentacao.html">ALIMENTAÇÃO SAUDÁVEL</a></li>
+                <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="#">RECEITAS FIT</a></li>
+                <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="comunidadePrincipal.html">COMUNIDADE</a></li>
+            </ul>
+            <div style="position: relative; left: 15px">
+                <div id="divBusca" class="justify-content-center">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                    <img src="busca.png" width="30" height="30" id="btnBusca" alt="Buscar"/>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+    
+   
+    <div class="container" id="divprincipal">
+    <div class="container" id="carrossel" >
+        
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="artigo2.jpg" alt="Los Angeles">
+      <div class="carousel-caption">
+        <h3 style="text-decoration-color: black"><a href="artigoAlimenta%C3%A7%C3%A3o2.html" style="text-decoration: none">Pirâmide alimentar – Saiba tudo sobre o modelo de pirâmide brasileira</a></h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="artigo6.jpg" alt="Chicago" >
+      <div class="carousel-caption">
+        <h3 style="text-decoration-color: black"><a href="artigoAlimenta%C3%A7%C3%A3o.html" style="text-decoration: none">5 receitas vegetarianas light deliciosas e rápidas de preparar</a></h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="artigo9.jpg" alt="New York" 
+           >
+      <div class="carousel-caption">
+        <h3 style="text-decoration-color: black"><a href="artigoExercicio3.html" style="text-decoration: none">Exercícios isolados, usar ou não em meu treino?</a></h3>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+</div>
+<div class="container " id="divloginPrincipal">
+    
+  <!--  
+  <div class="form-group" id="divtextlogin">
+    <label for="email">Email address:<input type="email" class="form-control" id="email" style=""></label>
+  </div>
+  <div >
+    <label for="pwd">Password:<input type="password" class="form-control" id="senha"></label>
+  </div> -->
+  <a href="index.html"><button type="button" class="btn justify-content-center text-body font-weight-bolder" style="background-color:#ffffff; position: relative; float:left;left: 40px;width: 90px;height: 40px;top: 10px "  >Entrar</button></a>
+  <a href="cadastroPrincipal.html"><button type="button"  class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; position: relative; float:right;left: -40px; width: 90px;height: 40px;top: 10px">Cadastrar</button></a>
+    </div>    
+    </div>
+    
+    <!-- login script -->
+    <script>
+         firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+
+            document.getElementById("user_div").style.display = "block";
+            document.getElementById("divtextlogin").style.display = "none";
+
+            var user = firebase.auth().currentUser;
+
+            if(user != null){
+
+              var email_id = user.email;
+                var email_verified = user.emailVerified;
+              document.getElementById("user_para").innerHTML = "Welcome User : " + email_id +
+                  "Verified: " + email_verified;
+
+            }
+
+          } else {
+            // No user is signed in.
+
+            document.getElementById("user_div").style.display = "none";
+            document.getElementById("divtextlogin").style.display = "block";
+
+          }
+        });
+
+        function login(){
+
+          var userEmail = document.getElementById("email").value;
+          var userPass = document.getElementById("senha").value;
+
+          firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            window.alert("Error : " + errorMessage);
+
+            // ...
+          });
+
+        }
+
+
+    </script>
+    
+     <!-- login script -->
+    
+    
+    
+<div class="container-" style="position:sticky">
+
+</div>
+ <article id="articleCategorias">
+     <h1 class="text-center" id="tituloCategorias">EXERCÍCIOS FÍSICOS</h1>
+<!-- inicio categorias -->    
+    <div class="card-columns">
+       <!--1--> 
+        <div class="card" style="width: 14rem;">
+      <img src="artigo7.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Exercícios de força, aspectos práticos para seu treino!</h5>
+        <a href="artigoExercicio1.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--2-->
+        <div class="card" style="width: 14rem;">
+      <img src="imagem2.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Exercício aeróbico e anaeróbico, entenda as diferenças e vantagens de cada um</h5>
+        <a href="artigoExercicio2.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--3-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo9.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Exercícios isolados, usar ou não em meu treino?</h5>
+        <a href="artigoExercicio3.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--4-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo10.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Como eliminar flacidez abdominal, 6 exercícios mais alimentação!</h5>
+        <a href="artigoExercicio4.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--5-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo11.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">7 Exercícios proibidos para quem tem hérnia de disco</h5>
+        <a href="artigoExercicio5.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--6-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo12.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Exercícios físicos na melhora da produtividade</h5>
+        <a href="artigoExercicio6.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           
+</div>   
+    </article>
+    
+    
+    <article id="articleCategorias" style="position: relative;margin-top: 50px">
+     <h1 class="text-center" id="tituloCategorias">ALIMENTAÇÃO SAUDÁVEL</h1>
+<!-- inicio categorias -->    
+    <div class="card-columns">
+       <!--1--> 
+        <div class="card" style="width: 14rem;">
+      <img src="imagem1.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard"class="card-title">Alimentação Saudável: O que é, Benefícios e Cardápio</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o1.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--2-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo2.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Pirâmide alimentar – Saiba tudo sobre o modelo de pirâmide brasileira</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o2.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--3-->
+        <div class="card" style="width: 14rem;">
+      <img src="imagem3.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">20 Alimentos para Comer Antes do Treino</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o3.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--4-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo4.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Vitamina C: Para que serve, Benefícios, Alimentos e Como tomar</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o4.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--5-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo5.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">Dieta – 4 dicas de alimentação para iniciantes na musculação</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o4.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>
+           <!--6-->
+        <div class="card" style="width: 14rem;">
+      <img src="artigo6.jpg" style="width: 220px;height: 140px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="corpoCard" class="card-title">5 receitas vegetarianas light deliciosas e rápidas de preparar</h5>
+        <a href="artigoAlimenta%C3%A7%C3%A3o.html" class="btn btn-dark">Ir</a>
+      </div>
+    </div>        
+</div>   
+    </article>
+    
+<footer  class="text-white"style="position:relative; float: right;top:50px; background-color: #6351ce;">
+    <div class="container text-center text-md-left" style="position: relative; ">
+        <div style="font-size: 16px; height: 0px">
+          <h6 class="font-weight-bold">HEALTHY LIFE</h6>
+          <p>
+            <a href="principal.html" class="text-white">Pagina Inicial</a>
+          </p>
+          <p>
+            <a href="#!" class="text-white">sugestões</a>
+          </p>
+          <p>
+            <a href="#!" class="text-white">Precisa de ajuda ?</a>
+          </p>
+        </div>
+          <div class="text-center">
+          <img class=" justify-center py-3 "src="life2.png" style="position: relative; justify-content: center; width:200px;" >
+          </div>
+        <div style="font-size: 10px;position: relative; margin-left: 700px; top:-70px" >
+          <p>Atualmente, muitas pessoas sofrem com doenças que são causadas pela má alimentação ou até mesmo pela falta de alimentação, o Healthy Life tem como objetivo levar o bem-estar para quem irá utilizá-lo, através de assistência com os exercícios, com a alimentação e dieta, receitas fitness e outros meios para ter uma vida mais saudável, afinal, ter saúde e qualidade de vida é essencial para a existência humana.</p>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: 
+      <a> Healthy Life</a>
+    </div>
+  </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html> <head> <meta name = "google-signin-client_id" conteúdo = "YOUR_CLIENT_ID.apps.googleusercontent.com" > </ head> <body> <div id = "meu-signin2" > </ div> Função <script> onSuccess ( googleUser ) {       console . log ( 'Conectado como:' + googleUser . getBasicProfile (). getName ());
+
+    
+
+
+   
+  
+     
+ 
+    
+     
+      console . log ( erro ); } função renderButton () {       gapi . signin2 . render ( 'meu-signin2' , { 'scope' : 'e-mail do perfil' , 'largura' : 240 , 'altura' : 50 , 'longtitle' : true , 'theme' : 'dark' , 'onsuccess' : onSuccess , 'onfailure' : onFailure });
+    
+     
+ 
+         
+         
+         
+         
+         
+        
+        
+      
+    
+  </ script> <script src = "https://apis.google.com/js/platform.js?onload=renderButton" assíncrono defer > </ script> </ body> </ html>
+
+     

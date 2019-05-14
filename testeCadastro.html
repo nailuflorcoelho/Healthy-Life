@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>cadastro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+    <!--<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>-->
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyA1NCVLZhoOGkwfNTrpZl0Y4-n7QnZsEfM",
+            authDomain: "healthylife-77c13.firebaseapp.com",
+            databaseURL: "https://healthylife-77c13.firebaseio.com",
+            projectId: "healthylife",
+            storageBucket: "healthylife.appspot.com",
+            messagingSenderId: "508711404403"
+          };
+          firebase.initializeApp(config);
+        </script>
+    
+</head>
+<body>
+
+<div class="container">
+  <h2>Cadastro</h2>
+ 
+    <div class="form-group" >
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" name="nome" required>
+      <div class="valid-feedback">Válido</div>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="nomeu">Nome de Usuário</label>
+      <input type="text" class="form-control " id="nomeu" placeholder="Digite seu nome de usuário" name="nomeu" required>
+      <div class="valid-feedback">Válido</div>
+      <div class="invalid-feedback"></div>
+    </div>
+      <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control " id="email" placeholder="Digite seu email" name="email" required>
+      <div class="valid-feedback">Válido</div>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Senha</label>
+      <input type="password" class="form-control " id="senha" placeholder="Digite sua senha" name="senha" required>
+      <div class="valid-feedback">Válido</div>
+      <div class="invalid-feedback"></div>
+    </div>
+      <div class="form-group">
+      <label for="pwd">Confirmar senha</label>
+      <input type="password" class="form-control " id="senhac" placeholder="Digite sua senha novamente" name="senhac" required>
+      <div class="valid-feedback">Válido</div>
+      <div class="invalid-feedback"></div>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="save_user();">Cadastrar</button>
+        
+</div>
+    
+    <script>
+        
+        function save_user(){
+        var nome = document.getElementById('nome').value;
+        var nomeu = document.getElementById('nomeu').value;
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+        var senhac = document.getElementById('senhac').value;       
+
+        firebase.database().ref('users/'+nome).set({
+            nome: nome,
+            nomeu: nomeu,
+            email: email,
+            senha: senha,
+            senhac: senhac
+        });   
+        
+        firebase.auth().createUserWithEmailAndPassword(email, senha).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+    
+            }
+    </script>
+
+</body>
+</html>

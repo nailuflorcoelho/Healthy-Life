@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>healthy life</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="arquivo.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+
+<div>
+<nav class="navbar navbar-expand-sm justify-content-center" style="background-color:#b0e0e6; border-radius: 15px" id="nav" >
+    <div style="position: relative; top: auto;left: -20px;width: auto ">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="principal.html">
+    <img src="life2.png" alt="logo" style="width:190px;">
+  </a>
+  </div>
+  <!-- Links -->
+  <ul class="navbar-nav ">
+    <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="exercicios.html">EXERCÍCIOS FÍSICOS</a></li>
+    <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="alimentacao.html">ALIMENTAÇÃO SAUDÁVEL</a></li>
+    <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="#">RECEITAS FIT</a></li>
+    <li class="nav-item"><a id="navitem" class="nav-link text-body font-weight-bolder" href="#">COMUNIDADE</a></li>
+  </ul>
+<!--    <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit"><img src=""></button>
+    </form> -->
+
+    <div style="position: relative; left: 15px ">
+        <div id="divBusca" class="justify-content-center">
+        <input type="text" id="txtBusca" placeholder="Buscar..."/>
+        <img src="busca.png" width="30" height="30" id="btnBusca" alt="Buscar"/>
+    </div>
+        </div>
+</nav>   
+</div>
+   
+        <div class="container " id="divloginPrincipal">
+    
+  <!--  
+  <div class="form-group" id="divtextlogin">
+    <label for="email">Email address:<input type="email" class="form-control" id="email" style=""></label>
+  </div>
+  <div >
+    <label for="pwd">Password:<input type="password" class="form-control" id="senha"></label>
+  </div> -->
+  <a href="index.html"><button type="button" class="btn justify-content-center text-body font-weight-bolder" style="background-color:#ffffff; position: relative; float:left;left: 40px;width: 90px;height: 40px;top: 10px "  >Entrar</button></a>
+  <a href="cadastroPrincipal.html"><button type="button"  class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; position: relative; float:right;left: -40px; width: 90px;height: 40px;top: 10px">Cadastrar</button></a>
+    </div> 
+    
+    
+<div id="caminho" class="container-fluid">
+  <button id="btnCaminho" type="button" class="btn text-dark "><a class="font-weight-bold" href="principal.html"style="color: black; font-size: 11px">PÁGINA INICIAL</a></button>
+  >
+  <button id="btnCaminho" type="button" class="btn text-dark"><a class="font-weight-bold" href="alimentacao.html"style="color: black; font-size: 11px">ALIMENTAÇÃO SAUDÁVEL</a></button>
+</div>
+    
+    <div  id="divArtigosRecentes">
+    <h1 class="text-center" style="font-size: 20px;" ><b>Artigos recentes</b></h1>
+        
+        <hr>
+        
+    <a id="corpoArtigosRecentes"><b>Alimentação Saudável: O que é, Benefícios e Cardápio</b></a> 
+        <br>
+        <hr>
+    <a id="corpoArtigosRecentes"><b>Pirâmide alimentar – Saiba tudo sobre o modelo de pirâmide brasileira</b></a> 
+        <br>
+        <hr>
+    <a id="corpoArtigosRecentes"><b>20 Alimentos para Comer Antes do Treino</b></a> 
+        <br>
+        <hr>
+    <a id="corpoArtigosRecentes"><b>Vitamina C: Para que serve, Benefícios, Alimentos e Como tomar</b></a> 
+        <br>
+        <hr>
+    
+    <a id="corpoArtigosRecentes"><b>Dieta – 4 dicas de alimentação para iniciantes na musculação</b></a> 
+        <br>
+        <hr>
+        
+    <a id="corpoArtigosRecentes"><b>5 receitas vegetarianas light deliciosas e rápidas de preparar</b></a> 
+        <br>
+        <hr>
+    </div>
+    
+    <div style="position: relative; position: relative;
+    float: left;
+    width: 680px;
+   ">
+    <hr>
+    <b><h1 style="position:relative;top: 0px; font-size: 30px;text-decoration-style: solid">Alimentação Saudável: O que é, Benefícios e Cardápio</h1>
+    </b>
+        
+        <div>
+            <p id="autorArtigo">Equipe Healthy Life</p>
+            <img src="imagem1.jpg" id="imgArtigo">
+            <table>
+            <td> </td>
+            <td><p id="corpoArtigo">
+Um guia completo sobre a importância de ter uma alimentação saudável. O que se deve evitar, os alimentos mais recomendados, dicas para não desistir e cardápio completo para quem quer emagrecer e ganhar massa muscular.
+<br>
+Com a vida agitada que levamos, é fácil negligenciar a nossa alimentação.
+A pressa e a praticidade fazem com que priorizemos o consumo de alimentos processados, enlatados e cheios de produtos químicos prejudiciais à nossa saúde.
+Pode não parecer no momento, mas comer mal por um longo período certamente acarretará problemas de saúde e uma qualidade ruim de vida.
+Por isso é essencial mudar de hábitos e passar por uma reeducação alimentar.
+Neste texto, falaremos tudo o que você precisa saber sobre alimentação saudável.
+Quais os melhores alimentos, como iniciar essa mudança, quais são seus benefícios, dicas de como mantê-la e muitas outras informações relevantes. Confira!
+<br>
+<b>O que é alimentação saudável?</b>
+                <br>
+A alimentação saudável é aquela que proporciona todos os nutrientes exigidos pelo nosso corpo para funcionar corretamente e da melhor maneira possível.
+
+O consumo de alimento precisa ser equilibrado, sem exageros e planejado.
+
+Alimentar-se bem não é apenas uma questão estética, e sim de saúde. Você pode viver mais e se sentir melhor mentalmente ao comer os alimentos corretos ao longo da vida. Não existe nenhum prejuízo em ter uma alimentação saudável.
+
+Quando você come bem, fica muito mais fácil evitar problemas sérios de saúde, como:
+<br>
+gastrite,
+obesidade,
+hipertensão,
+infarto,
+diabetes,
+derrame,
+colesterol alto,
+entre outros.
+Para uma alimentação ser considerada saudável, além de equilibrada, ela precisa ser: colorida, variada, segura, acessível e suficiente.
+
+Lembre-se de evitar os alimentos industrializados e diversificar os ingredientes naturais!
+
+O que comer e o que evitar?
+<br>
+o que é cardápio e atividades para alimentos
+Os alimentos mais indicados para uma alimentação saudável são os que ajudam a balancear o corpo, melhorar o funcionamento do organismo e prevenir doenças. Conheça quais são eles:
+
+Proteínas:
+Tanto as de origem animal (carnes, leites, queijos, etc.) quanto as de origem vegetal (quinoa, soja, oleaginosas, etc.) são essenciais porque atuam no desenvolvimento dos músculos e ajudam a controlar os hormônios e a energia.
+
+Melhores fontes:
+Veja algumas das melhores proteínas animais para você adicionar a sua dieta:
+
+carne vermelha magra como: patinho, coxão mole, etc;
+carnes brancas (peito e filés de frango);
+peixes (salmão, atum, tilápia), etc;
+ovos (cozidos, omelete);
+leite desnatado e derivados: queijo cottage (ótima opção), queijo branco light, kefir de leite (melhor opção de todas);
+Leia também:
+Kefir de Leite – O que é, Seus 10 Benefícios e Como Fazer
+
+No quesito proteínas vegetais, podemos citar:
+quinoa,
+grão-de-bico,
+lentilha,
+feijão,
+chia,
+aveia,
+castanhas,
+semente de girassol,
+semente de cânhamo,
+tofu,
+leites de amêndoas,
+leites de arroz,
+folhas verdes escuras como couve, escarola, etc.
+Frutas:
+a sua grande variedade é rica em fibras, o que ajuda o sistema digestivo e melhora a saúde cardíaca.
+
+Além disso, são ricas em vitaminas e nutrientes excelentes para o sistema imunológico.
+
+Entre as melhores frutas para perder peso, estão:
+mamão,
+maçã,
+melancia,
+melão,
+cerejas,
+uvas,
+framboesas,
+pêras,
+toranjas
+e abacaxi.
+Lembre-se de consumi-las sempre frescas e sem exageros.
+
+Agora, se você preferir frutas que ajudem no ganho de massa muscular, fornecendo mais energia durante os treinos, pode incluir:
+
+kiwi,
+laranja,
+bananas,
+assim como os já citados mamão e maçã.
+Verduras e hortaliças:
+desde brócolis até a batata-doce, este grupo é fundamental à nossa saúde e você pode comê-lo à vontade.
+
+Verduras e hortaliças previnem a anemia, melhoram a saúde óssea e cerebral, além de proporcionarem muitos nutrientes essenciais.
+
+Se você quiser perder peso, os seguintes vegetais são os melhores:
+alface,
+brócolis,
+repolho,
+rúcula,
+couve,
+agrião,
+beterraba,
+abobrinha,
+chuchu,
+nabo,
+cenoura,
+pepino,
+rabanete,
+tomate, etc.
+Entre os que mais auxiliam no ganho de massa magra, estão: espinafre, soja, brócolis e batata-doce.
+
+Existem alimentos que não são proibidos, mas devem ser controlados e consumidos apenas eventualmente. São eles:
+
+Chocolate:
+Quase todo mundo ama chocolate, não é? Contudo, consumir em excesso pode ser prejudicial à saúde.
+
+É por isso que quando for comer, prefira as versões com 70 a 100% de cacau, que são mais saudáveis.
+
+Carboidratos:
+São essenciais ao nosso corpo, pois fornecem a energia de que precisamos para viver. Contudo, eles podem engordar se você não tiver controle no consumo, mesmo os carboidratos complexos e as versões integrais.
+
+Quando for consumir carboidratos, prefira os seguintes:
+
+batata-doce,
+inhame,
+arroz integral,
+mandioca,
+macarrão e massas integrais, entre outros.
+Café:
+A cafeína é um estimulante natural. Ela protege o sistema imunológico e melhora o humor. Todavia, você não deve ultrapassar 400 mg de cafeína ao dia, pois pode acabar sofrendo efeitos colaterais.
+
+Lipídios:
+Apesar de serem tachados como vilões, os lipídios são fundamentais ao nosso corpo, pois auxiliam em funções básicas, fornecem energia e protegem os órgãos.
+
+Por isso, é importante não retirá-los da dieta, só não exagere.
+
+Você pode encontrá-los em alimentos, como:
+
+Coco,
+azeite extra-virgem,
+abacate,
+manteiga,
+quinoa,
+chia,
+linhaça
+amendoim,
+amêndoas,
+castanhas,
+macadâmias,
+entre outros.
+Sucos e chás
+Além de ingerir no minimo 2 litros de água por dia, sempre opte por sucos naturais feitos na hora, pois são ricos em fibras, vitaminas e outros nutrientes. Veja alguns exemplos de sucos:
+
+suco laranja,
+abacaxi com hortelã,
+sucos verdes como maça batido com couve,
+suco de uva integral com gengibre,
+cenoura com beterraba,
+entre outros.
+Beba mais chás durante o dia! Chá verde, chá de hibisco, chá dente de leão, entre outros, são chás super saudáveis e que além de tudo, ajudam a diminuir colesterol ruim e emagrecer.
+
+Obvio que para eles contribuírem no emagrecimento, sua alimentação precisa estar bem elaborada e praticando atividades físicas. 
+
+Agora veja os principais alimentos que você se deve evitar o máximo que puder. Tente tirá-los gradativamente de sua dieta até eliminá-los de vez. São eles:
+
+Gordura trans (evitar excessos):
+São encontradas em salgadinhos, batatas fritas congeladas, sorvetes, margarinas, biscoitos, etc. Elas são prejudiciais porque elevam taxas do colesterol LDL (o ruim) e podem acarretar problemas cardiovasculares.
+
+Álcool (evitar excessos):
+Nos fins de semana até que vai, mas fora isso deve-se evitar o quanto puder. O álcool danifica o fígado, assim como causa dependência e reduz a capacidade cerebral.
+
+Industrializados:
+os alimentos industrializados são cheios de química e conservantes terríveis para nossa saúde, os quais podem bloquear os efeitos de outros nutrientes. Procure sempre consumir alimentos naturais.
+
+Quais são os benefícios de ter uma alimentação saudável?
+A alimentação saudável só traz benefícios para a sua saúde. Confira os principais:
+
+1 – Previne doenças
+Ao adicionar apenas alimentos saudáveis à sua rotina, seu corpo vai se livrando das toxinas e alterações causadas pela alimentação ruim.
+
+Isso faz com que você tenha mais saúde e fique protegido contra doenças, como infarto, diabetes, hipertensão, etc.
+
+2 – Ajuda na perda de peso
+Consumir os alimentos de forma equilibrada e planejada evita que você coma em excesso e acabe engordando.
+
+Além disso, você pode selecionar uma alimentação saudável com ingredientes específicos para ganhar massa muscular.
+
+3 – Prolonga a vida
+Comer bem serve para proteger suas células contra radicais livres, que são moléculas prejudiciais e causadoras do envelhecimento precoce, entre outras doenças, como o câncer.
+
+Isso porque muitos alimentos saudáveis são antioxidantes e destroem essas moléculas.
+
+4 – Melhora a qualidade de vida
+Ao aderir à alimentação saudável, você começa a se sentir cada vez melhor até perceber que está mais disposto, animado, bem-humorado e feliz.
+
+Tudo isso graças aos alimentos super nutritivos e saborosos de sua dieta nova.
+
+Confira 13 dicas de como iniciar e manter uma alimentação saudável!
+Até aqui você já entendeu toda a importância de uma alimentação saudável, certo? Reeducar-se nesse quesito é essencial para aproveitar bem a vida e as pessoas que você ama.
+
+Mesmo sabendo de tudo isso, você pode pensar que é difícil começar esse tipo de alimentação e mais difícil ainda mantê-la. É verdade! Não é simples mudar seus hábitos de consumo. Contudo, está bem longe de ser impossível.
+
+Você pode sim aderir à alimentação saudável! É só ter força de vontade e disciplina.
+
+Alimentar-se bem todos os dias não é dieta, é melhor do que isso: é um novo estilo de vida, que diferentemente da dieta, não vai embora.
+
+Para te ajudar nessa jornada, preparamos 13 dicas importantes sobre como ter essa alimentação saudável em seus dias:
+
+1 – Beba muita água por dia, ao menos 2 litros.
+Essa quantidade pode variar dependendo do biotipo da pessoa e de outras necessidades, mas de qualquer forma é importante não esquecer de ingerir bastante líquido.
+
+2 – Não fique sem comer
+Muita gente acha que ficar em jejum emagrece, mas na verdade pode até causar um efeito contrário, sem contar que a falta de nutrientes no organismo leva a consequências bem ruins.
+
+3 – Não pule nenhuma refeição
+Faça o café da manhã, o almoço e o jantar, acrescentando ainda o lanche da tarde. É importante se alimentar de três em três horas, sem exageros, apenas com frutas ou alimentos pouco calóricos.
+
+4 – Adicione gradualmente verduras e frutas em sua dieta
+Se você não está acostumado a comer esses alimentos, comece com pouco e depois aumente as quantidades até virar rotina.
+
+5 – Não coma de forma apressada
+Mastigue bem antes de engolir e não ingira bebidas durante as refeições, pois elas podem inflar o estômago e prejudicar a alimentação.
+
+6 – Vontade louca de comer doce
+Bateu a vontade louca de comer doces? Como uma fruta ou veja as opções de sobremesas light que temos em nossa categoria de receitas fitness. Acredite, seu corpo irá agradecê-la depois.
+
+7 – Evite o consumo de fast-food, alimentos industrializados, refrigerantes e bebidas alcoólicas
+Não precisa parar totalmente logo de início. Vá diminuindo aos poucos as quantidades até finalmente não sentir mais necessidade. Beba mais sucos de frutas naturais.
+
+8 – Quase tudo o que você faz frito pode ser feito assado ou grelhado
+Elimine a fritura o máximo que puder, pois ela só traz prejuízos. Se mesmo assim precisar fritar, então que seja com uma linha de azeite extra-virgem ou óleo de girassol.
+
+As fritadeiras elétricas airfryer ainda são as melhores opções, temos receitas fit para fazer nelas aqui.
+
+9 – Prefira sempre a manteiga ao invés da margarina
+Mesmo assim não exagere. Escolha uma refeição apenas para utilizá-la em torradas integrais.
+
+10 – Reduza a quantidade de sal em todos os pratos
+Coloque apenas o suficiente para a comida não ficar sem sabor. Procure utilizar ervas e outros temperos naturais no lugar do sal.
+
+11 – Consuma sempre as carnes vermelhas magras, não gordas
+Coxão mole e patinho são os melhores exemplos de carnes magras e benéficas, além de super versáteis, macias e saborosas.
+
+12 – Tenha horários definidos para as refeições
+Pois assim seu corpo se acostuma com essa rotina e fica bem mais fácil controlar a ingestão e as quantidades de calorias por dia.
+
+13 – Diversifique os alimentos
+A alimentação saudável só é penosa para quem não vê a infinitude de comidas boas e benéficas à saúde que estão disponíveis na natureza. Quanto mais colorido for o seu prato, melhor será a refeição!
+
+Para completar, lembre-se de não exagerar. Não coma em excesso de uma única vez nem os alimentos considerados saudáveis. O ideal é equilibrar a dieta e comer só o suficiente.
+
+Se um de seus objetivos for perder peso, o recomendado é que além de uma alimentação saudável, você também pratique exercícios físicos diários. Uma caminhada de 30 minutos todos os dias já auxilia muito.
+
+Veja o exemplo de um cardápio saudável!
+Existe uma grande variedade de cardápios e comidas fitness disponíveis aqui no Treino Mestre, vamos disponibilizar logo abaixo um guia com mais 50 receitas de comida fitness, inclusive para congelar e para quem leva marmita. Veja:
+
+Leia também:
+Comida Fitness – 31 Receitas para um Cardápio Completo
+
+Marmita Fitness – Algumas ideias e dicas com CARDÁPIO SEMANAL!
+
+Você pode usar sua criatividade e predileções para criá-los. Vamos dar apenas um exemplo para te inspirar a começar a sua alimentação saudável. Confira:
+
+Café da manhã: Vitamina de frutas com 1 copo (250 ml) de leite desnatado, banana e/ou morangos, aveia em flocos, chia ou farinha de linhaça. Lanche de pão de forma integral com ovo mexido e queijo branco fresco light ou queijo cottage.
+Almoço: 3 colheres de sopa de arroz integral com ervilha e cenoura, uma posta de tilápia grelhada e salada a gosto. 
+Lanche da tarde: 2 torradas integrais com geleia de frutas sem açúcar ou lanche de forno com recheio de alimentos saudáveis (temos receitas aqui no site).
+Jantar: uma omelete low carb de rúcula, cenoura refogada e salada de brócolis ou couve-flor. (também temos outras receitas low carb aqui no site).
+Ceia: um mingau de aveia e meio abacate.
+Importante lembrar
+Esse é apenas um exemplo de cardápio com alimentos saudáveis para um dia da semana. Caso queira para outros dias, pode ir substituindo com os alimentos que exemplificamos no começo do artigo, além dos artigos com receitas e cardápios fitness que citamos agora pouco.
+
+Lembrando que todos os alimentos e cardápios aqui abordados, são apenas a parte qualitativa, a parte quantitativa deve ser elaborado por um nutricionista, pois ele te avaliará para passar as quantidades e alimentos específicos para suas necessidades e biotipo.
+
+Viu como ter uma alimentação saudável não é chato? Comer bem todos os dias seguindo as dicas acima é melhor e mais eficaz do que qualquer dieta doida vista pela internet. Não acha?</p>  
+         </td>
+            </table>
+        </div>
+</div>
+    
+    <footer  class="text-white"style="position:relative; float: right;top:50px; background-color: #6351ce;">
+    <div class="container text-center text-md-left" style="position: relative; ">
+        <div style="font-size: 16px; height: 0px">
+          <h6 class="font-weight-bold">HEALTHY LIFE</h6>
+          <p>
+            <a href="principal.html" class="text-white">Pagina Inicial</a>
+          </p>
+          <p>
+            <a href="#!" class="text-white">sugestões</a>
+          </p>
+          <p>
+            <a href="#!" class="text-white">Precisa de ajuda ?</a>
+          </p>
+        </div>
+          <div class="text-center">
+          <img class=" justify-center py-3 "src="life2.png" style="position: relative; justify-content: center; width:200px;" >
+          </div>
+        <div style="font-size: 10px;position: relative; margin-left: 700px; top:-70px" >
+          <p>Atualmente, muitas pessoas sofrem com doenças que são causadas pela má alimentação ou até mesmo pela falta de alimentação, o Healthy Life tem como objetivo levar o bem-estar para quem irá utilizá-lo, através de assistência com os exercícios, com a alimentação e dieta, receitas fitness e outros meios para ter uma vida mais saudável, afinal, ter saúde e qualidade de vida é essencial para a existência humana.</p>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: 
+      <a> Healthy Life</a>
+    </div>
+  </footer>
+
+    
+    
+</body>
+</html>

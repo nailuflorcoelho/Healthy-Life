@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link rel="stylesheet" href="arquivo.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="arquivo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+     
+        <nav class="navbar navbar-expand-sm justify-content-center " style="background-color:#b0e0e6; border-radius: 15px" id="nav" >
+            <div style="position:relative; top: auto;left: -16px;width: auto ">
+  <!-- Brand/logo -->
+                <a class="navbar-brand" href="principal.html"><img src="life2.png" alt="logo" style="width:190px;"></a>
+            </div>
+        </nav>
+    
+    <div class="justify-content-center ">
+    
+    <div class="container" id="contlogin" >
+    <div id="divlogin" class="form-control justify-content-center">
+  <div id="login_div" class="main-div">
+    <h3 style="justify-content: center; position: relative; left: 100px">Login</h3>
+    <input class="form-control" type="email" placeholder="Email..." id="email_field" style="position: relative; top: 15px" />
+    <input class="form-control" type="password" placeholder="Senha..." id="password_field" style="position: relative; top: 30px" />
+
+    <button onclick="login()" class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; top: 45px; position: relative; float:left;left: 45px; height: 40px;">Entrar</button>
+      <a href="cadastroPrincipal.html"> <button class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; top: 45px; position: relative; float:right;left: -50px; width: 90px;height: 40px;">Cadastrar</button></a> 
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <p id="user_para">SEJA BEM-VINDO</p>
+          <p id="user_v">SEJA BEM-VINDO</p>
+    <button onclick="logout()" class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; top: 45px; position: relative; float:left;left: 80px; height: 40px;">Deslogar</button>
+    <button onclick="send_verification()" class="btn justify-content-center font-weight-bolder" style="background-color:#ffffff; top: 90px; position: relative; float:center;left: -45px;height: 40px;">Verificação email</button>
+  </div>
+</div>
+</div>
+        </div>
+
+   <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyA1NCVLZhoOGkwfNTrpZl0Y4-n7QnZsEfM",
+            authDomain: "healthylife-77c13.firebaseapp.com",
+            databaseURL: "https://healthylife-77c13.firebaseio.com",
+            projectId: "healthylife",
+            storageBucket: "healthylife.appspot.com",
+            messagingSenderId: "508711404403"
+          };
+          firebase.initializeApp(config);
+        </script>
+    
+  <script src="index.js"></script>
+
+</body>
+</html>
